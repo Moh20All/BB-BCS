@@ -176,6 +176,12 @@ object-fit: cover;
     .comerc img{
         display: none;
     }
+    .comerc video{
+        width: 95%;
+    }
+    *{
+        max-width: 100%;
+    }
 }
 .popup{
     position: fixed;
@@ -224,4 +230,7 @@ footer::after{
     position: absolute;
     top: -5px;left: 0;
     background-color: white;
+}
+.fact span{
+    color: #ff6e6c;
 }
