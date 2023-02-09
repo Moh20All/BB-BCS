@@ -29,6 +29,7 @@ document.querySelectorAll(".BB-sc .vid-container .vid video").forEach(vid => {
         document.querySelector(".popup video").src = vid.getAttribute("src");
     }
 });
-document.querySelector(".popup span").onclick = () => {
+document.querySelector(".popup span").onclick, document.querySelector(".popup video").onblur = () => {
     document.querySelector(".popup").style.display = "none";
+    document.querySelector(".popup video").src = "";
 }

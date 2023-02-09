@@ -1,3 +1,7 @@
+*{
+    font-family:'Poppins', sans-serif ;
+    outline: none;
+}
 body{
    background-color: #222222;
    margin: 0;
@@ -6,9 +10,10 @@ body{
    font-family: 'Poppins', sans-serif;
    color: white;
    scroll-behavior: smooth;
+   overflow-x: hidden;
 }
 header{
-        display: flex;
+    display: flex;
     justify-content: space-evenly;
     align-items: center;
     position: relative;
@@ -25,24 +30,27 @@ header img{
     width: 150px;
 
 }
-article{
+hr{
+    width: 80%;
+}
+article,.BCS,.comerc,.fact{
     max-width: 80%;
     margin: 50px 10%;
 }
-article p{
+article p,.BCS p,.comerc p,.fact p{
     font-size: 20px;
 }
-article h1{
+article h1 , .BCS h1,.comerc h1,.fact h1{
     font-size: 45px;
     text-transform: capitalize;
 }
 .char {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 30px;
+  grid-gap: 50px;
   margin-top: 80px;
   position: relative;
-  width: 80%;
+  max-width: 100%;
   margin: 0 10%;
 }
 .card{
@@ -54,6 +62,7 @@ article h1{
 max-width:273px;
 transition: .3s ease;
 z-index: 1;
+object-fit: cover;
 }
 .card p{
     margin: 5px;
@@ -69,6 +78,7 @@ z-index: 1;
 .imge-card{
     position: relative;
     cursor: pointer;
+    object-fit: cover;
 }
 .imge-card>img:hover,.imge-card h2:hover~.imge-card img {
     opacity:40%;
@@ -145,7 +155,27 @@ z-index: 1;
     .popup video{
         width: 90%;
     }
-    
+    article{
+        text-align: center;
+    }
+    header{
+        margin-top: 15px;
+    }
+    .char::after{
+        bottom: 1%;
+    }
+    .char{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .BCS::after,.BCS::before{
+        display: none;
+    }
+    .comerc img{
+        display: none;
+    }
 }
 .popup{
     position: fixed;
@@ -154,6 +184,7 @@ z-index: 1;
     height: 100%;
     background-color: rgb(0,0,0,.8);
     display: none;
+    z-index: 104;
 }
 .popup video{
     position: absolute;
@@ -171,4 +202,26 @@ z-index: 1;
     font-weight: 500;
     z-index: 101;
     cursor: pointer;
+}
+.BCS{
+    position: relative;
+}
+.comerc img{
+    position: absolute;
+    right: 30%;
+    height: 270px;
+}
+footer{
+    padding: 30px;
+    text-align: center;
+    font-size: 20px;
+    position: relative;
+}
+footer::after{
+    content: '';
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    top: -5px;left: 0;
+    background-color: white;
 }
