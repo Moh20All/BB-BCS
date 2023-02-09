@@ -32,4 +32,5 @@ document.querySelectorAll(".BB-sc .vid-container .vid video").forEach(vid => {
 document.querySelector(".popup span").onclick = () => {
     document.querySelector(".popup").style.display = "none";
     document.querySelector(".popup video").src = "";
+    console.log("Done")
 }
